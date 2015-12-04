@@ -40,7 +40,7 @@ describe("Buffer#indexOf", function () {
         expect(buffer.indexOf("CC", 1)).to.be.equal(-1);
         expect(buffer.indexOf("CA", 1)).to.be.equal(-1);
     });
-    
+
     it("Number as value", function () {
         var buffer = new Buffer([ 1, 2, 3 ]);
 

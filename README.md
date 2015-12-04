@@ -29,5 +29,5 @@ npm install buffer-indexof-polyfill
 [npm-url]: https://npmjs.org/package/buffer-indexof-polyfill
 [downloads-image]: https://img.shields.io/npm/dm/buffer-indexof-polyfill.svg
 [downloads-url]: https://npmjs.org/package/buffer-indexof-polyfill
-[travis-image]: https://travis-ci.org/sarosia/buffer-indexof-polyfill.png?branch=master
+[travis-image]: https://travis-ci.org/sarosia/buffer-indexof-polyfill.svg?branch=master
 [travis-url]: https://travis-ci.org/sarosia/buffer-indexof-polyfill

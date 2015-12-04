@@ -9,14 +9,16 @@
   },
   "author": "https://github.com/sarosia",
   "license": "MIT",
-  "engines": { "node": ">=0.10" },
+  "engines": {
+    "node": ">=0.10"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sarosia/buffer-indexof-polyfill.git"
   },
   "devDependencies": {
     "chai": "^3.3.0",
-    "eslint": "^1.6.0",
+    "eslint": "^1.10.3",
     "mocha": "^2.3.3"
   },
   "keywords": [
