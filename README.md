@@ -4,7 +4,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 
-This is a polyfill for [`Buffer#indexOf`](https://nodejs.org/api/buffer.html#buffer_buf_indexof_value_byteoffset) introduced in NodeJS 4.0.
+This is a polyfill for [`Buffer#indexOf`](https://nodejs.org/api/buffer.html#buffer_buf_indexof_value_byteoffset) and Buffer#lastIndexOf introduced in NodeJS 4.0.
 
 ## Example
 
