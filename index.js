@@ -60,7 +60,7 @@ function bufferLastIndexOf (value, offset) {
     }
 
     return -1;
-};
+}
 
 
 if (Buffer.prototype.lastIndexOf) {
