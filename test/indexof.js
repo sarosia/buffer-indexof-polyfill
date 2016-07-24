@@ -92,6 +92,24 @@ describe("Buffer#lastIndexOf", function () {
         expect(buffer.lastIndexOf("C", 1)).to.be.equal(-1);
         expect(buffer.lastIndexOf("CC", 1)).to.be.equal(-1);
         expect(buffer.lastIndexOf("CA", 1)).to.be.equal(-1);
+
+        // make sure it works predictable
+        buffer = buffer.toString();
+
+        expect(buffer.lastIndexOf("ABC")).to.be.equal(3);
+        expect(buffer.lastIndexOf("AB")).to.be.equal(3);
+        expect(buffer.lastIndexOf("BC")).to.be.equal(4);
+        expect(buffer.lastIndexOf("C")).to.be.equal(5);
+        expect(buffer.lastIndexOf("CC")).to.be.equal(-1);
+        expect(buffer.lastIndexOf("CA")).to.be.equal(2);
+
+        expect(buffer.lastIndexOf("ABC", 1)).to.be.equal(0);
+        expect(buffer.lastIndexOf("AB", 1)).to.be.equal(0);
+        expect(buffer.lastIndexOf("BC", 1)).to.be.equal(1);
+        expect(buffer.lastIndexOf("C", 1)).to.be.equal(-1);
+        expect(buffer.lastIndexOf("CC", 1)).to.be.equal(-1);
+        expect(buffer.lastIndexOf("CA", 1)).to.be.equal(-1);
+
     });
 
     it("Number as value", function () {
