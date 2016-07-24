@@ -11,6 +11,7 @@ node_js:
     - "4.0"
     - "4.2"
     - "5.0"
+    - "6"
 sudo: false
 script:
     - "npm run lint && npm test"
