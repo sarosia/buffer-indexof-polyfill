@@ -1,6 +1,6 @@
 {
   "name": "buffer-indexof-polyfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a polyfill for Buffer#indexOf introduced in NodeJS 4.0.",
   "main": "index.js",
   "scripts": {
