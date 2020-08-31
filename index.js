@@ -7,9 +7,9 @@ if (!Buffer.prototype.indexOf) {
         // Always wrap the input as a Buffer so that this method will support any
         // data type such as array octet, string or buffer.
         if (typeof value === "string" || value instanceof String) {
-            value = new Buffer(value);
+            value = Buffer.from(value);
         } else if (typeof value === "number" || value instanceof Number) {
-            value = new Buffer([ value ]);
+            value = Buffer.from([ value ]);
         }
 
         var len = value.length;
@@ -37,9 +37,9 @@ function bufferLastIndexOf (value, offset) {
     // Always wrap the input as a Buffer so that this method will support any
     // data type such as array octet, string or buffer.
     if (typeof value === "string" || value instanceof String) {
-        value = new Buffer(value);
+        value = Buffer.from(value);
     } else if (typeof value === "number" || value instanceof Number) {
-        value = new Buffer([ value ]);
+        value = Buffer.from([ value ]);
     }
 
     var len = value.length;
@@ -65,7 +65,7 @@ function bufferLastIndexOf (value, offset) {
 
 if (Buffer.prototype.lastIndexOf) {
     // check Buffer#lastIndexOf is usable: https://github.com/nodejs/node/issues/4604
-    if (new Buffer ("ABC").lastIndexOf ("ABC") === -1)
+    if (Buffer.from("ABC").lastIndexOf ("ABC") === -1)
         Buffer.prototype.lastIndexOf = bufferLastIndexOf;
 } else {
     Buffer.prototype.lastIndexOf = bufferLastIndexOf;
