@@ -6,25 +6,25 @@ require("../index.js");
 describe("Buffer#indexOf", function () {
 
     it("Buffer as value", function () {
-        var buffer = Buffer.from("ABC");
+        var buffer = new Buffer("ABC");
 
-        expect(buffer.indexOf(Buffer.from("ABC"))).to.be.equal(0);
-        expect(buffer.indexOf(Buffer.from("AB"))).to.be.equal(0);
-        expect(buffer.indexOf(Buffer.from("BC"))).to.be.equal(1);
-        expect(buffer.indexOf(Buffer.from("C"))).to.be.equal(2);
-        expect(buffer.indexOf(Buffer.from("CC"))).to.be.equal(-1);
-        expect(buffer.indexOf(Buffer.from("CA"))).to.be.equal(-1);
+        expect(buffer.indexOf(new Buffer("ABC"))).to.be.equal(0);
+        expect(buffer.indexOf(new Buffer("AB"))).to.be.equal(0);
+        expect(buffer.indexOf(new Buffer("BC"))).to.be.equal(1);
+        expect(buffer.indexOf(new Buffer("C"))).to.be.equal(2);
+        expect(buffer.indexOf(new Buffer("CC"))).to.be.equal(-1);
+        expect(buffer.indexOf(new Buffer("CA"))).to.be.equal(-1);
 
-        expect(buffer.indexOf(Buffer.from("ABC"), 1)).to.be.equal(-1);
-        expect(buffer.indexOf(Buffer.from("AB"), 1)).to.be.equal(-1);
-        expect(buffer.indexOf(Buffer.from("BC"), 1)).to.be.equal(1);
-        expect(buffer.indexOf(Buffer.from("C"), 1)).to.be.equal(2);
-        expect(buffer.indexOf(Buffer.from("CC"), 1)).to.be.equal(-1);
-        expect(buffer.indexOf(Buffer.from("CA"), 1)).to.be.equal(-1);
+        expect(buffer.indexOf(new Buffer("ABC"), 1)).to.be.equal(-1);
+        expect(buffer.indexOf(new Buffer("AB"), 1)).to.be.equal(-1);
+        expect(buffer.indexOf(new Buffer("BC"), 1)).to.be.equal(1);
+        expect(buffer.indexOf(new Buffer("C"), 1)).to.be.equal(2);
+        expect(buffer.indexOf(new Buffer("CC"), 1)).to.be.equal(-1);
+        expect(buffer.indexOf(new Buffer("CA"), 1)).to.be.equal(-1);
     });
 
     it("String as value", function () {
-        var buffer = Buffer.from("ABC");
+        var buffer = new Buffer("ABC");
 
         expect(buffer.indexOf("ABC")).to.be.equal(0);
         expect(buffer.indexOf("AB")).to.be.equal(0);
@@ -42,7 +42,7 @@ describe("Buffer#indexOf", function () {
     });
 
     it("Number as value", function () {
-        var buffer = Buffer.from([ 1, 2, 3 ]);
+        var buffer = new Buffer([ 1, 2, 3 ]);
 
         expect(buffer.indexOf(1)).to.be.equal(0);
         expect(buffer.indexOf(2)).to.be.equal(1);
@@ -59,25 +59,25 @@ describe("Buffer#indexOf", function () {
 describe("Buffer#lastIndexOf", function () {
 
     it("Buffer as value", function () {
-        var buffer = Buffer.from("ABCABC");
+        var buffer = new Buffer("ABCABC");
 
-        expect(buffer.lastIndexOf(Buffer.from("ABC"))).to.be.equal(3);
-        expect(buffer.lastIndexOf(Buffer.from("AB"))).to.be.equal(3);
-        expect(buffer.lastIndexOf(Buffer.from("BC"))).to.be.equal(4);
-        expect(buffer.lastIndexOf(Buffer.from("C"))).to.be.equal(5);
-        expect(buffer.lastIndexOf(Buffer.from("CC"))).to.be.equal(-1);
-        expect(buffer.lastIndexOf(Buffer.from("CA"))).to.be.equal(2);
+        expect(buffer.lastIndexOf(new Buffer("ABC"))).to.be.equal(3);
+        expect(buffer.lastIndexOf(new Buffer("AB"))).to.be.equal(3);
+        expect(buffer.lastIndexOf(new Buffer("BC"))).to.be.equal(4);
+        expect(buffer.lastIndexOf(new Buffer("C"))).to.be.equal(5);
+        expect(buffer.lastIndexOf(new Buffer("CC"))).to.be.equal(-1);
+        expect(buffer.lastIndexOf(new Buffer("CA"))).to.be.equal(2);
 
-        expect(buffer.lastIndexOf(Buffer.from("ABC"), 1)).to.be.equal(0);
-        expect(buffer.lastIndexOf(Buffer.from("AB"), 1)).to.be.equal(0);
-        expect(buffer.lastIndexOf(Buffer.from("BC"), 1)).to.be.equal(1);
-        expect(buffer.lastIndexOf(Buffer.from("C"), 1)).to.be.equal(-1);
-        expect(buffer.lastIndexOf(Buffer.from("CC"), 1)).to.be.equal(-1);
-        expect(buffer.lastIndexOf(Buffer.from("CA"), 1)).to.be.equal(-1);
+        expect(buffer.lastIndexOf(new Buffer("ABC"), 1)).to.be.equal(0);
+        expect(buffer.lastIndexOf(new Buffer("AB"), 1)).to.be.equal(0);
+        expect(buffer.lastIndexOf(new Buffer("BC"), 1)).to.be.equal(1);
+        expect(buffer.lastIndexOf(new Buffer("C"), 1)).to.be.equal(-1);
+        expect(buffer.lastIndexOf(new Buffer("CC"), 1)).to.be.equal(-1);
+        expect(buffer.lastIndexOf(new Buffer("CA"), 1)).to.be.equal(-1);
     });
 
     it("String as value", function () {
-        var buffer = Buffer.from("ABCABC");
+        var buffer = new Buffer("ABCABC");
 
         expect(buffer.lastIndexOf("ABC")).to.be.equal(3);
         expect(buffer.lastIndexOf("AB")).to.be.equal(3);
@@ -113,7 +113,7 @@ describe("Buffer#lastIndexOf", function () {
     });
 
     it("Number as value", function () {
-        var buffer = Buffer.from([ 1, 2, 3, 1, 2, 3]);
+        var buffer = new Buffer([ 1, 2, 3, 1, 2, 3]);
 
         expect(buffer.lastIndexOf(1)).to.be.equal(3);
         expect(buffer.lastIndexOf(2)).to.be.equal(4);
