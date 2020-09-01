@@ -5,8 +5,6 @@ var initBuffer = require('../init-buffer');
 
 require("../index.js");
 
-console.log('NODE_VERSION', process.version);
-
 describe("Buffer#indexOf", function () {
 
     it("Buffer as value", function () {
@@ -29,7 +27,6 @@ describe("Buffer#indexOf", function () {
 
     it("String as value", function () {
         var buffer = initBuffer("ABC");
-
         expect(buffer.indexOf("ABC")).to.be.equal(0);
         expect(buffer.indexOf("AB")).to.be.equal(0);
         expect(buffer.indexOf("BC")).to.be.equal(1);
@@ -47,7 +44,6 @@ describe("Buffer#indexOf", function () {
 
     it("Number as value", function () {
         var buffer = initBuffer([ 1, 2, 3 ]);
-
         expect(buffer.indexOf(1)).to.be.equal(0);
         expect(buffer.indexOf(2)).to.be.equal(1);
         expect(buffer.indexOf(3)).to.be.equal(2);
