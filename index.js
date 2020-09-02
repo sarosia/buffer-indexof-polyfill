@@ -1,5 +1,5 @@
 "use strict";
-var initBuffer = require('./init-buffer');
+var initBuffer = require("./init-buffer");
 
 if (!Buffer.prototype.indexOf) {
     Buffer.prototype.indexOf = function (value, offset) {

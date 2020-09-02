@@ -1,7 +1,7 @@
 "use strict";
 
 var expect = require("chai").expect;
-var initBuffer = require('../init-buffer');
+var initBuffer = require("../init-buffer");
 
 require("../index.js");
 
